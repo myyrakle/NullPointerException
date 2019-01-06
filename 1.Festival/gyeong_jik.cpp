@@ -38,3 +38,4 @@ int main()
         printf("%.12f\n",min_average);
     }
 }
+ 
