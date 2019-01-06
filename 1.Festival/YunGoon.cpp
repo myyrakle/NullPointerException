@@ -11,6 +11,16 @@ int main()
 	
 	while (C--)
 	{
+		int N, L;
+		scanf("%d %d", &N, &L);
+		
+		int arr[1001]{};
+		for (int i = 1; i <= N; ++i)
+		{
+			scanf("%d", arr + i);
+			arr[i] += arr[i-1];
+		}
+		
 		double ans = 1e5;
 		for (int i = L; i <= N; ++i)
 			for (int j = 0; j <= i-L; ++j)
