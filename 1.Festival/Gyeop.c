@@ -30,7 +30,6 @@ double movingarray(Data data) {
 
 int main(void)
 {
-
 	testcase C;
 	Data data[100];
 
