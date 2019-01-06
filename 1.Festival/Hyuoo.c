@@ -14,7 +14,7 @@ int main() {
 			scanf_s("%d", &cost[n]);
 		//입력끝
 	
-  min = 100000;
+  		min = 100000;
 		for (i = L; i <= N; i++) {
 			for (j = 0; j <= (N - i); j++) {
 				for (sum=0,n = 0; n < i; n++)
