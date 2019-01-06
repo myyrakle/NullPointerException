@@ -4,7 +4,7 @@
 - 다들 부지런히 풉시당
 
 # Member
-- 건모: ? / [thak00](https://algospot.com/user/profile/37121)
+- 건모: [thak1411](https://github.com/thak1411) / [thak00](https://algospot.com/user/profile/37121)
 - 규리: [HEx10](https://github.com/HEx10) / [0x10](https://algospot.com/user/profile/59614)
 - 겹겹: [rlduq1993](https://github.com/rlduq1993) / [겹겹이](https://algospot.com/user/profile/59616)
 - 경직: [myyrakle](https://github.com/myyrakle) / [경직](https://algospot.com/user/profile/59463)
