@@ -29,15 +29,12 @@ int main() {
 				((c = getchar()) == '\n') ? j-- : (bod[i][j] = c);
 			}
 		}
-		scanf("%d", &N);
-		getchar();
+		scanf("%d ", &N);
 		while (N--) {
 			i=0;
 			memset(word, 0, sizeof(word));
 			memset(dp, -1, sizeof(dp));
-      
-			while (((c = getchar()) == '\n') ? 0 : (word[i++] = c));
-			printf("%s", word);
+			while (((c = getchar()) == '\n') ? 0 : printf("%c",(word[i++] = c)));
 			for (i = 0; i < 5; i++) {
 				for (j = 0; j < 5; j++) {
 					if (hasWord(i, j, 0)==true)goto YES;
