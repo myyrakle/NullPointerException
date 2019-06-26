@@ -1,0 +1,74 @@
+#include <iostream>
+#include <array>
+#include <vector>
+#include <algorithm>
+
+constexpr auto STUDENT_MAX = 10;
+
+//인풋
+size_t student_count;
+size_t pair_count;
+std::vector<std::vector<bool>> pair_list;  //짝꿍 확인용 배열입니다.
+
+std::array<bool, STUDENT_MAX> has_pair_list; //이미 짝을 갖고 있는 친구
+
+const auto NIL = -123456789;
+
+int count()
+{
+    int firstNoPair = NIL;
+
+    for(size_t i = 0; i< student_count; i++)
+        if(has_pair_list[i]==false)
+        {
+            firstNoPair = i;  
+            break;
+        }
+
+    if(firstNoPair == NIL)
+        return 1;
+
+    int result = 0;
+
+    for(size_t other = firstNoPair+1; other < student_count; other++)
+        if(has_pair_list[other]==false && pair_list[firstNoPair][other])
+        {
+            has_pair_list[firstNoPair]=true;
+            has_pair_list[other]=true;
+            result += count();
+
+            //확인했으니 풀어줌
+            has_pair_list[firstNoPair] = false;
+            has_pair_list[other] = false;
+        }
+        
+    return result;
+}
+
+auto main() -> decltype(int{44})
+{
+    //테스트 케이스 처리
+    int Case;
+    std::cin>>Case;
+
+    for(int i=0; i<Case; i++)
+    {
+        std::cin>>student_count>>pair_count;
+
+        pair_list.clear();
+        pair_list.assign(student_count, std::vector<bool>(student_count, false));
+        has_pair_list.fill(false);
+
+        //추가입력
+        for(int i =0; i<pair_count;i++)
+        {
+            int a,b;
+            std::cin>>a>>b;
+
+            pair_list[a][b]=true;
+            pair_list[b][a]=true;
+        }
+
+        std::cout<<count()<<std::endl;
+    }
+}
