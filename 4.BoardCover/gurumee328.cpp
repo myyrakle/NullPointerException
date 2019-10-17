@@ -12,7 +12,6 @@
 #include <bitset>
 #include <time.h>
 #include <random>
-#include <stdlib.h>
 
 using namespace std;
 using Board = vector<vector<bool>>;
